@@ -8,23 +8,26 @@
 </head>
 
 <body>
-    <input type="text" id="nameInput" placeholder="Nhập tên của bạn">
-    <button onclick="checkInput()">Click me</button>
-    <div id="output"></div>
+    <input type="text" id="inputname" placeholder="Nhap ho ten">
+    <button id="btclick">Click </button>
+    <div id="display"></div>
 
     <script>
-        function checkInput() {
-            const input = document.getElementById('nameInput').value;
-            const output = document.getElementById('output');
+        var input = document.getElementById('inputname');
+        var display = document.getElementById('display');
+        var btclick = document.getElementById('btclick');
 
-            if (input.trim() === '') {
-                output.textContent = 'Bạn chưa nhập gì cả!';
-            } else if (!isNaN(input)) {
-                output.textContent = 'Bạn mới vừa nhập số';
-            } else {
-                output.textContent = 'Bạn mới vừa nhập text';
-            }
+        function hello() {
+            var pattern = /\d/;
+            var value = inputname.value;
+            if (value == '') {
+                display.innerText = "Xin hay nhap";
+            } else if (pattern.test(value)) {
+                display.innerText = "Hay nhap so";
+            } else
+                display.innerText = "Hay nhap chu";
         }
+        btclick.onclick = hello;
     </script>
 </body>
 
