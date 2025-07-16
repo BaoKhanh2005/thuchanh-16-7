@@ -7,24 +7,26 @@
     <title>Document</title>
 </head>
 
+
+</body>
+
+</html>
+
 <body>
-    <input id="ten" type="text" placeholder="nhapchu">
-    <button id="btclick">click</button>
-    <p id="display"></p>
+    <input type="text" id="inputname" placeholder="Nhap ho ten">
+    <button id="btclick">Click </button>
+    <div id="display"></div>
+
     <script>
-        var ten = document.getElementById('ten')
-        var btclick = document.getElementById('btclick')
-        var display = document.getElementById('display')
+        var inputname = document.getElementById('inputname');
+        var display = document.getElementById('display');
+        var btclick = document.getElementById('btclick');
 
         function hello() {
-            console.log(ten);
-            display.innerText = ten.value
-
+            display.innerText = "Hello " + inputname.value
         }
-
-        btclick.onclick = hello
+        btclick.onclick = hello;
     </script>
-
 </body>
 
 </html>

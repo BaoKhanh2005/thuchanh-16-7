@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="nameInput" placeholder="Nhập tên của bạn">
+    <button onclick="checkInput()">Click me</button>
+    <div id="output"></div>
+
+    <script>
+        function checkInput() {
+            const input = document.getElementById('nameInput').value;
+            const output = document.getElementById('output');
+
+            if (input.trim() === '') {
+                output.textContent = 'Bạn chưa nhập gì cả!';
+            } else if (!isNaN(input)) {
+                output.textContent = 'Bạn mới vừa nhập số';
+            } else {
+                output.textContent = 'Bạn mới vừa nhập text';
+            }
+        }
+    </script>
+</body>
+
+</html>
