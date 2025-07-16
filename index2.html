@@ -8,17 +8,23 @@
 </head>
 
 <body>
-    <input id="inputen" type="text" placeholder="ten">
+    <input id="ten" type="text" placeholder="nhapchu">
     <button id="btclick">click</button>
+    <p id="display"></p>
     <script>
-        var inputen = document.getElementById('inputen')
+        var ten = document.getElementById('ten')
         var btclick = document.getElementById('btclick')
+        var display = document.getElementById('display')
 
         function hello() {
-            console.log(inputen);
+            console.log(ten);
+            display.innerText = ten.value
+
         }
-        btclick.onclick = hello;
+
+        btclick.onclick = hello
     </script>
+
 </body>
 
 </html>
