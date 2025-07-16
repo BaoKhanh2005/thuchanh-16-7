@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="number1" type="text" placeholder="Nhap so"> +
+    <input id="number2" type="text" placeholder="Nhap so"> =
+    <span id="display"></span><br>
+    <button id="click">Tính tổng</button>
+
+    <script>
+        var number1 = document.getElementById('number1');
+        var number2 = document.getElementById('number2');
+        var display = document.getElementById('display');
+        var clickButton = document.getElementById('click');
+
+        function hello() {
+            var value1 = parseFloat(number1.value);
+            var value2 = parseFloat(number2.value);
+            var result = value1 + value2;
+
+            display.innerText = result;
+            console.log("Kết quả là: " + result);
+        }
+
+        clickButton.onclick = hello;
+    </script>
+</body>
+
+</html>
